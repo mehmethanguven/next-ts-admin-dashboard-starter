@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Satoshi";
+    src: url("../fonts/Satoshi-Black.woff2") format("woff2"),
+      url("../fonts//Satoshi-Black.woff") format("woff");
+    font-weight: 900;
+    font-display: swap;
+    font-style: normal;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply m-2 rounded px-4 py-2 font-bold;
+  }
+  .sm {
+    @apply px-2;
+  }
+
+  .md {
+    @apply px-4;
+  }
+
+  .lg {
+    @apply px-8;
+  }
+
+  .xl {
+    @apply px-16;
+  }
+
+  /*button colors: default, primary, info, success, warning, danger, dark */
+
+  .filled {
+    @apply bg-cyan-500 text-white;
+  }
+  .filled:hover {
+    @apply bg-cyan-600 text-white;
+  }
+  .gradient {
+    @apply bg-cyan-500 text-gray-800;
+  }
+  .outlined {
+    @apply border border-gray-300 text-gray-700 hover:border-gray-400 active:bg-gray-100 active:text-gray-700/80;
+  }
+  .text {
+    @apply bg-transparent text-gray-800;
+  }
+  .default {
+    @apply bg-gray-100 text-gray-800;
+  }
+  .default:hover {
+    @apply bg-gray-200 text-gray-800;
+  }
+
+  .primary {
+    @apply bg-bleed-blue text-white;
+  }
+  .primary:hover {
+    @apply bg-blue-600 text-white;
+  }
+
+  .secondary {
+    @apply bg-gray-700 text-white;
+  }
+  .secondary:hover {
+    @apply bg-gray-500 text-white;
+  }
+
+  .success {
+    @apply bg-green-500 text-white;
+  }
+  .success:hover {
+    @apply bg-green-600 text-white;
+  }
+
+  .info {
+    @apply bg-blue-500 text-white;
+  }
+  .info:hover {
+    @apply bg-blue-600 text-white;
+  }
+
+  .warning {
+    @apply bg-yellow-400 text-white;
+  }
+  .warning:hover {
+    @apply bg-yellow-500 text-white;
+  }
+
+  .danger {
+    @apply bg-red-500 text-white;
+  }
+  .danger:hover {
+    @apply bg-red-600 text-white;
+  }
+
+  .dark {
+    @apply bg-gray-800 text-white;
+  }
+  .dark:hover {
+    @apply bg-gray-900 text-white;
+  }
+
+  .disabled {
+    @apply cursor-not-allowed opacity-50;
+  }
+  .disabled:hover {
+    @apply cursor-not-allowed opacity-50;
+  }
+}
+
+/* Hamburger Menu */
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: #000;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translate(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
+}

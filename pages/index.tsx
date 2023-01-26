@@ -1,7 +1,7 @@
 import React from 'react'
 import { TopCards } from '@/components/cards'
 import Charts from '@/components/charts'
-import RecentOrders from '@/components/RecentOrders'
+import RecentOrders from '@/components/orders/RecentOrders'
 
 const Home = () => {
   return (

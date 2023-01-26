@@ -1,16 +1,12 @@
+import { useProducts } from '@/hooks/useProducts'
 import { useRateFilter } from '@/hooks/useRateFilter'
 import Subheader from '@/components/header/Subheader'
 import { Product, Filter, filterProducts } from '@/components/product'
 import Loader from '@/components/Loader'
 import { IProduct } from '@/types/IProduct'
-import axios from 'axios'
-import { GetStaticProps, InferGetServerSidePropsType } from 'next'
 
-const ProductsPage = ({
-  products,
-}: InferGetServerSidePropsType<typeof getStaticProps>) => {
-  // const { products } = useProducts()
-
+const ProductsPageWithHooks = () => {
+  const { products } = useProducts()
   const { filterRate, handleRating } = useRateFilter()
 
   return (
@@ -29,16 +25,4 @@ const ProductsPage = ({
     </div>
   )
 }
-export default ProductsPage
-
-export const getStaticProps: GetStaticProps<{
-  products: IProduct[]
-}> = async () => {
-  const response = await axios.get('https://fakestoreapi.com/products')
-  const products: IProduct[] = response.data
-  return {
-    props: {
-      products,
-    },
-  }
-}
+export default ProductsPageWithHooks

@@ -1,7 +1,11 @@
 {
-  "name": "next-ts-starter",
+  "name": "next-ts-admin-dashboard-starter",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Mehmethan Guven",
+    "email": "mehmethanguven@gmail.com"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",

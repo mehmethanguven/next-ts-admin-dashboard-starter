@@ -1,6 +1,15 @@
 This is a Next.js admin dashboard starter project (Next.js - Typescript - Jest - Cypress - Tailwindcss - Eslint - Prettier - Lintstaged - Hasky)
 
+## Author
+
+Mehmethan Guven
+<br/>
+<a href='mailto:mehmethanguven@gmail.com<'>mehmethanguven@gmail.com</a>
+<br/>
+Hire me!
+
 ## Live on Vercel
+
 <a href="https://next-ts-admin-dashboard-starter-h6vlyyn59-mehmethanguven.vercel.app/" target="_blank">Live Preview</a>
 
 ## Getting Started
